@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Renan Martineli de Paula" />
+    <meta name="description" content="Rock Paper Scissors JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link type='text/css' rel='stylesheet' href="rps.css" />
+    <script src="rps-app.js" defer></script>
+    <title>Title</title>
+  </head>
+  <body>
+    <h1>
+      Pick your hand
+    </h1>
+    <div id="main-card">
+      <figure>
+        <figcaption>Rock</figcaption>
+        <img id="rock" src="img/rps-rock.png">
+      </figure>
+      <figure>
+        <figcaption>Paper</figcaption>
+        <img id="paper" src="img/rps-paper.png">
+      </figure>
+      <figure>
+        <figcaption>Scissors</figcaption>
+        <img id="scissors" src="img/rps-scissors.png">
+      </figure>
+    <div id="result">
+      <h3 id="compChoice"></h3>
+      <h1 id="outcome"></h1>
+    </div>
+    <audio id="winSound">
+      <source src="sound/kids-shouting-yay-sound-effect.mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="loseSound">
+      <source src="sound/roblox-death-sound.mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="tieSound">
+      <source src="sound/aww-sound-effect.mp3" />
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>
