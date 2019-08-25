@@ -10,7 +10,11 @@ rock.onclick = function() {
   const computerChoice = getComputerChoice();
 
   document.querySelector("#compChoice").textContent = `Computer picked: ${computerChoice}`;
-  document.querySelector("#outcome").textContent = `${determineWinner(userChoice, computerChoice)}`;
+  if (document.querySelector("#outcome").textContent !== '') {
+    document.querySelector("#outcome").textContent = '';
+    document.querySelector("#outcome").textContent = `${determineWinner(userChoice, computerChoice)}`;
+  }
+
 }
 
 paper.onclick = function() {
