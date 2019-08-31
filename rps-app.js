@@ -55,37 +55,28 @@ const getComputerChoice = () => {
 // decides the outcome based on user and computer choices
 const determineWinner = (userChoice, computerChoice) => {
   const playSound = {
-    winSound: new Audio("sound/kids-shouting-yay-sound-effect.mp3"),
-    loseSound: new Audio("sound/aww-sound-effect.mp3"),
-    tieSound: new Audio("sound/roblox-death-sound.mp3"),
-
-    stopSound() {
-      this.winSound.pause();
-      this.winSound.currentTime = 0;
-      this.loseSound.pause();
-      this.loseSound.currentTime = 0;
-      this.tieSound.pause();
-      this.tieSound.currentTime = 0;
-    },
-
+    audio: document.querySelector("audio"),
+    winSound: "sound/kids-shouting-yay-sound-effect.mp3",
+    loseSound: "sound/aww-sound-effect.mp3",
+    tieSound: "sound/roblox-death-sound.mp3",
+  
     playerWin() {
-      this.stopSound();
-      this.winSound.play();
+      this.audio.src = this.winSound;
+      this.audio.play();
       return `Player wins! :D`;
     },
-
+  
     playerLose() {
-      this.stopSound();
-      this.loseSound.play();
+      this.audio.src = this.loseSound;
+      this.audio.play();
       return `Computer wins! :(`;
     },
-
+  
     playerTie() {
-      this.stopSound();
-      this.tieSound.play();
+      this.audio.src = this.tieSound;
+      this.audio.play();
       return `It's a tie! :/`;
     }
-
   };
 
   if ((userChoice === computerChoice)) {
