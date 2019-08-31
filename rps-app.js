@@ -59,18 +59,6 @@ const determineWinner = (userChoice, computerChoice) => {
     loseSound: new Audio("sound/aww-sound-effect.mp3"),
     tieSound: new Audio("sound/roblox-death-sound.mp3"),
 
-    playWinSound() {
-      this.winSound.play();
-    },
-
-    playLoseSound() {
-      this.loseSound.play();
-    },
-
-    playTieSound() {
-      this.tieSound.play();
-    },
-
     stopSound() {
       this.winSound.pause();
       this.winSound.currentTime = 0;
@@ -78,42 +66,47 @@ const determineWinner = (userChoice, computerChoice) => {
       this.loseSound.currentTime = 0;
       this.tieSound.pause();
       this.tieSound.currentTime = 0;
+    },
+
+    playerWin() {
+      this.stopSound();
+      this.winSound.play();
+      return `Player wins! :D`;
+    },
+
+    playerLose() {
+      this.stopSound();
+      this.loseSound.play();
+      return `Computer wins! :(`;
+    },
+
+    playerTie() {
+      this.stopSound();
+      this.tieSound.play();
+      return `It's a tie! :/`;
     }
+
   };
 
   if ((userChoice === computerChoice)) {
-    playSound.stopSound();
-    playSound.playTieSound();
-    return `It's a tie! :/`;
+    return playSound.playerTie()
   } else if ((userChoice === 'rock')) {
       if ((computerChoice === 'paper')) {
-        playSound.stopSound();
-        playSound.playLoseSound();
-        return `Computer wins! :(`;
+        return playSound.playerLose();
       } else {
-        playSound.stopSound();
-        playSound.playWinSound();
-        return `Player wins! :D`;
+        return playSound.playerWin();
       }
   } else if ((userChoice === 'paper')) {
     	if ((computerChoice === 'scissors')) {
-        playSound.stopSound();
-        playSound.playLoseSound();
-        return `Computer wins! :(`;
+        return playSound.playerLose();
       } else {
-        playSound.stopSound();
-        playSound.playWinSound();
-        return `Player wins! :D`;
+        return playSound.playerWin();
       }
   } else if ((userChoice === 'scissors')) {
       if ((computerChoice === 'rock')) {
-        playSound.stopSound();
-        playSound.playLoseSound();
-        return `Computer wins! :(`;
+        return playSound.playerLose();
       } else {
-        playSound.stopSound();
-        playSound.playWinSound();
-        return `Player wins! :D`;
+        return playSound.playerWin();
       }
   }
 };
