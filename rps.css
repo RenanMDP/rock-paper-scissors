@@ -34,12 +34,13 @@ figcaption {
   width: 100%;
   text-align: center;
   padding: 15px;
+  /* border: 5px solid black; */
 }
 
 #outcome {
-  background-image: linear-gradient(red, blue);
+  /* background-image: linear-gradient(red, blue);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   color: maroon;
 }
