@@ -44,3 +44,12 @@ figcaption {
   -webkit-text-fill-color: transparent; */
   color: maroon;
 }
+
+#score {
+  border: 2px solid black;
+  padding: 15px;
+}
+
+#scoreMsg {
+  text-align: center;
+}

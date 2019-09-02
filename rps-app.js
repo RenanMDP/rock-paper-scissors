@@ -3,6 +3,14 @@
   let playerScoreCount = 0;
   let computerScoreCount = 0;
 
+  // keep game score
+  const scoreMsg = document.querySelector("#scoreMsg");
+  const playerScoreTag = document.querySelector("#playerScore");
+  const computerScoreTag = document.querySelector("#computerScore");
+  scoreMsg.textContent = `Score`;
+  playerScoreTag.textContent = `Player: ${playerScoreCount}`;
+  computerScoreTag.textContent = `Computer: ${computerScoreCount}`;
+
   // hand choice functions
   rock.onclick = function() {
     const rock = document.querySelector("#rock");
@@ -59,11 +67,7 @@
 
   // decides the outcome based on user and computer choices
   const determineWinner = (userChoice, computerChoice) => {
-    // keep game score
-    const playerScoreTag = document.querySelector("#playerScore");
-    const computerScoreTag = document.querySelector("#computerScore");
-    playerScoreTag.textContent = `Player: ${playerScoreCount}`;
-    computerScoreTag.textContent = `Computer: ${computerScoreCount}`;
+
     
     // play sound according to each outcome
     const playSound = {
