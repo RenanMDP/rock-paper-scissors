@@ -4,6 +4,7 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 2rem;
 }
 
 #main-card {
@@ -12,12 +13,12 @@ h1 {
   justify-content: space-around;
 }
 
-img {
+div figure img {
   display: block;
   width: 20vw;
   height: auto;
   margin: 0 auto;
-  background-color: rgba(81, 156, 156);
+  background-color: white;
 }
 
 img:hover {
@@ -52,4 +53,24 @@ figcaption {
 
 #scoreMsg {
   text-align: center;
+}
+
+#idiom-div {
+  border: 2px solid black;
+  height: fit-content;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+#idiom-div img {
+  /* background-color: white; */
+  display: block;
+  width: 5vw;
+  height: auto;
+  padding: 5px;
+}
+
+#idiom-div img:hover {
+  background-color: rgba(81, 156, 156);
 }

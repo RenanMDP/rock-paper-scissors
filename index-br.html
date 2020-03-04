@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Renan Martineli de Paula" />
+    <meta name="description" content="Pedra Papel Tesoura JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="rps.css" />
+    <script src="rps-app-br.js" defer></script>
+    <title>Pedra Papel Tesoura</title>
+  </head>
+  <body>
+    <div id="main-card">
+      <figure>
+        <figcaption>Pedra</figcaption>
+        <img id="pedra" src="img/rps-rock.png">
+      </figure>
+      <figure>
+        <figcaption>Papel</figcaption>
+        <img id="papel" src="img/rps-paper.png">
+      </figure>
+      <figure>
+        <figcaption>Tesoura</figcaption>
+        <img id="tesoura" src="img/rps-scissors.png">
+      </figure>
+      <div id="result">
+        <h3 id="compChoice"></h3>
+        <h1 id="outcome"></h1>
+      </div>
+      <div id="score">
+        <h2 id="scoreMsg"></h2>
+        <h3 id="playerScore"></h3>
+        <h3 id="computerScore"></h3>
+      </div>
+      <audio preload="none"></audio>
+      <div id="idiom-div">
+        <a href="index.html">
+          <img src="img/united_kingdom_640.png" alt="english language" />
+        </a>
+        <a href="index-br.html">
+          <img src="img/portugal_640.png" alt="idioma português" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
